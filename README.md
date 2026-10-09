@@ -2,7 +2,7 @@
 
 A Java-based application for visualizing and exploring word embeddings in a multidimensional vector space.
 
-The project uses a Python script to generate word embeddings and applies PCA for dimensionality reduction. Java handles the visualization, vector operations, and user interactions.
+The project uses Python to generate word embeddings and perform PCA for dimensionality reduction, while Java handles the visualization, vector operations, and user interactions.
 
 ## Features
 - Interactive 2D and 3D visualization of word embeddings
@@ -10,18 +10,28 @@ The project uses a Python script to generate word embeddings and applies PCA for
 - K-nearest neighbors search
 - Vector arithmetic and centroid calculations
 - Custom semantic axis projections
-- Search and highlight words
+- Word search and highlighting
 - Undo/Redo support
 
 ## Technologies
-- Java
-- Python
+- Java and JavaFX
+- Python (Gensim, NumPy, Scikit-learn)
 - PCA (Principal Component Analysis)
-- Object-Oriented Programming (OOP)
+- OOP principles
 - Strategy and Command design patterns
 
 ## Running the Project
 
-Run the Python embedding script to generate the word vectors.
+**Requirements:** Java, JavaFX, `json-simple`, and Python 3.
 
-Then open the Java project in IntelliJ IDEA and run the main application class.
+Install the Python dependencies:
+
+```bash
+python3 -m pip install gensim scikit-learn numpy
+```
+
+The application uses `embedder.py` to generate `full_vectors.json` and `pca_vectors.json` if they do not already exist.
+
+Run `view.Main` in IntelliJ IDEA to start the application.
+
+Make sure the required Python libraries are installed in the Python environment used by the application. The first run requires an internet connection to download the GloVe model.
